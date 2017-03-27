@@ -94,17 +94,32 @@ margin-bottom: 7px;
 /* ==========================================================================
     Menu styles stars here
    ========================================================================== */
-	.site-header{text-align: center; padding-top: 65px; background: #fafafa; border-radius: 3px 3px 0 0;}
+	.site-header{text-align: center; padding-top: 5px; background: #fafafa; border-radius: 3px 3px 0 0;}
+
+    .loginbtn{display: inline-block; text-align: right; width: 100%; border-bottom: 1px solid #eaeaea;}
+    .loginbtn img {width: 15%; height: 15%; padding-right: 25px; padding-bottom: 40px; padding-top: 10px;}
+    .loginbtn h1{font-size: 50px; line-height: 52px; color: #716a72; text-transform: uppercase;
+			 padding-bottom: 25px;  font-family: 'source_sans_problack'; letter-spacing: 7px; text-align: center;}
+
 	.logo{display: inline-block;}
 	.logo h1{font-size: 50px; line-height: 52px; color: #716a72; text-transform: uppercase; border-bottom: 1px solid #eaeaea;
 			 padding-bottom: 30px;  font-family: 'source_sans_problack'; letter-spacing: 7px;}
-	.menu{padding-top: 40px; padding-bottom: 45px; text-align: center;}
+
+	.menu{padding-top: 30px; padding-bottom: 25px; text-align: center;}
 	.menu .navbar{display: inline-block;  font-family: 'source_sans_prolight'; margin-bottom: 0;}
     .menu .navbar .nav > .active > a {color: #c85b5f; background: none; background-image: none;}
     .menu .navbar .nav > .active > a:hover{background: none; background-image: none; box-shadow: none;}
-    .menu .navbar .nav > li > a {color: #716a72; font-size: 16px; text-transform: uppercase; padding-right: 75px; 
+    .menu .navbar .nav > li > a {color: #716a72; font-size: 18px; text-transform: uppercase; padding-right: 30px;
                                 text-shadow: none; box-shadow: none; letter-spacing: 3px;}
     .menu .navbar .nav > li > a:hover{color: #c85b5f;}
+
+    .menutwo {text-align: center;}
+	.menutwo .navbar{display: inline-block;  font-family: 'source_sans_prolight'; margin-bottom: 0;}
+    .menutwo .navbar .nav > .active > a {color: #c85b5f; background: none; background-image: none;}
+    .menutwo .navbar .nav > .active > a:hover{background: none; background-image: none; box-shadow: none;}
+    .menutwo .navbar .nav > li > a {color: #fff; font-size: 18px; text-transform: uppercase; padding-right: 30px;
+                                text-shadow: none; box-shadow: none; letter-spacing: 3px; font-weight: bold;}
+    .menutwo .navbar .nav > li > a:hover{color: #c85b5f;}
 
   .mini-menu{display: none;margin: 0 10px;}
     .mini-menu .selectnav{ display: none; width: 100%;background: #716a72;font-weight: 600;padding: 10px;height: 42px; color: #fff; border-radius: 5px; cursor: pointer; outline: 0; border:none !important;}
@@ -175,7 +190,7 @@ left: auto;
 /* ==========================================================================
     General styles stars here
    ========================================================================== */
-	.featured-heading{background: #c85b5f; text-align: center; text-transform: uppercase; padding-top: 50px; padding-bottom: 70px;}
+	.featured-heading{background: #c85b5f; text-align: center; text-transform: uppercase; padding-top: 40px; padding-bottom: 50px;}
 	.featured-heading h1{font-size: 30px; line-height: 30px; color: #fff;letter-spacing: 2px; font-family: 'source_sans_problack';}
 	.featured-heading h2{font-family: 'source_sans_prolight'; font-size: 24px; line-height: 30px; letter-spacing: 1px;
                          color: #fff; font-weight: normal;}
@@ -183,15 +198,20 @@ left: auto;
     .featured-heading .form-horizontal .btn, input{text-transform: uppercase; font-size: 15px; color: #fff !important; }
     .featured-heading .form-horizontal .btn{padding: 11px 25px; opacity: 0.8; background: #df8080; border: none;  color: #fff; box-shadow: none;}
     .featured-heading .form-horizontal input{line-height:30px; padding-left: 8px; opacity: 0.8; background: none; border: 2px solid #df8080; border-right:none; color: #fff !important; }
-  
 
-	.featured-blocks{padding: 75px 30px; background: #fafafa;}
-	.featured-blocks .media .media-body h1{color: #716a72; font-size: 24px; line-height: 30px; padding-bottom: 25px; 
+
+	.featured-blocks{padding: 20px 30px; background: #fafafa;}
+	.featured-blocks .media .media-body h1{color: #716a72; font-size: 24px; line-height: 30px; padding-bottom: 25px;
                                              font-family: 'source_sans_problack'; text-transform: uppercase;}
     .featured-blocks .media .media-heading{margin-bottom: 0;}
     .featured-blocks .media .media-body .btn{color: #fff; padding: 9px 10px; border-radius: 5px; background: #c85b5f; text-transform: uppercase; border:none; text-shadow: none; font-family: 'source_sans_problack';
                                     letter-spacing: 2px; font-size: 16px; line-height: 17px;}
     .featured-blocks .media .media-body .btn:hover{background: #716a72; color: #fff;}
+    .featured-blocks .mais {padding-top:35px; text-align: right; padding-right: 25px;}
+    .featured-blocks .mais .btn{color: #fff; padding: 15px 35px 15px 35px; border-radius: 5px; background: #333333; text-transform: uppercase; border:none; text-shadow: none; font-family: 'source_sans_problack';
+                                    letter-spacing: 2px;line-height: 17px; font-size:20px;}
+    .featured-blocks .mais .btn:hover{background: #716a72; color: #fff;}
+
 
 	.featured-content{padding:70px 0; background: #fff;}
     .featured-content .block{ text-align: right; text-transform: uppercase;}
@@ -201,8 +221,9 @@ left: auto;
     .featured-content .block h1{color: #c85b5f; font-size: 30px; letter-spacing: 1px; line-height:30px; font-family: 'source_sans_problack';}
     .featured-content .block h2{color: #9d9d9d; font-size: 24px; line-height: 30px;font-family: 'source_sans_prolight'; padding-bottom: 25px;}
     .featured-content .block-content h3{color: #716a72; font-family: 'source_sans_proregular'; font-size: 19px; line-height: 24px; text-decoration: underline; padding-bottom: 22px;}
+
 	
-	.tabs{background: #fafafa; padding: 55px 30px;}
+	.tabs{background: #fafafa; padding: 20px 30px;}
   .tabs .ruler-bottom{border-bottom: none;}
     .tabs ul{border-bottom: none; margin: 0;}
     .tabs ul li{  background: #f2f2f2; border-radius: 3px 3px 0 0; margin-right: 8px; }
@@ -218,8 +239,13 @@ left: auto;
     .tabs .tab-content .block .no-spacing{padding-left: 0;}
     .tabs .nav-tabs a [class^="fw-icon-"]{display: inline-block; font-size: 15px; color: #716a72; margin-right: 5px;}
 
+    .tabs .mais {padding-top:25px; padding-right: 25px; text-align: right;}
 
+    .tabs .mais .btn{color: #fff; padding: 15px 35px 15px 35px; border-radius: 5px; background: #333333; text-transform: uppercase; border:none; text-shadow: none; font-family: 'source_sans_problack';
+                                    letter-spacing: 2px;line-height: 17px; font-size:20px;}
+    .tabs .mais .btn:hover{background: #716a72; color: #fff;}
 
+    .featuredtwo {background: #202020;}
 /* ==========================================================================
     Sidebar styles stars here
    ========================================================================== */
@@ -277,7 +303,7 @@ left: auto;
 }
  
 .bw:hover {
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(70%);
 }
 
 

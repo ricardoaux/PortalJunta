@@ -28,9 +28,10 @@
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
             <div class="container">
                 <div class="site-header">
-                    <div class="logo">
-                        <h1> Junta de Freguesia de XPTO </h1>
-                    </div>
+                        <div class="loginbtn">
+                            <img src="{% static "img/Signin.png" %}" alt="" class="bw">
+                            <h1> Junta de Freguesia de XPTO </h1>
+                        </div>
                     <div class="menu">
                             <nav class="navbar navbar-default" role="navigation">
                                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,21 +97,6 @@
                             </div><!--/.nav-collapse -->
                         </div>
 
-                        <div class="mini-menu">
-                            <label>
-                              <select class="selectnav">
-                                <option value="#" selected="">Home</option>
-                                <option value="#">About</option>
-                                <option value="#">→ Another action</option>
-                                <option value="#">→ Something else here</option>
-                                <option value="#">→ Another action</option>
-                                <option value="#">→ Something else here</option>
-                                <option value="#">Services</option>
-                                <option value="#">Work</option>
-                                <option value="#">Contact</option>
-                              </select>
-                          </label>
-                      </div>
                     </div>
                 </div>
             </div>
@@ -210,42 +196,64 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mais">
+                        <h1><a href="#" class="btn">Ver Todas as Notícias </a></h1>
+                    </div>
                 </div>
             </div>
+
 
             </div>
             <div class="container">
                 <div class="tabs">
                     <ul id="myTab" class="nav nav-tabs">
-                      <li class=""><a href="#Sedegestasteet" data-toggle="tab"><i class="fw-icon-flag"></i> Evento 1 </a></li>
+                      <li class="active"><a href="#Sedegestasteet" data-toggle="tab"><i class="fw-icon-flag"></i> Evento 1 </a></li>
                       <li class=""><a href="#morbiinterdum" data-toggle="tab"><i class="fw-icon-tint"></i> Evento 2 </a></li>
-                      <li class="active"><a href="#interdumMorbi" data-toggle="tab"><i class="fw-icon-magnet"></i> Evento 3 </a></li>
+                      <li class=""><a href="#interdumMorbi" data-toggle="tab"><i class="fw-icon-magnet"></i> Evento 3 </a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
                       <div class="tab-pane fade active in" id="Sedegestasteet">
                         <div class="row-fluid">
-                                <div class="block">
+                            <div class="block">
                                 <img src="{% static "img/img1.png" %}" class="spacing-b" alt="">
                                 <p class="last">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                                </div>
+                            </div>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="morbiinterdum">
                         <div class="row-fluid">
-                                <div class="block">
+                            <div class="block">
                                 <img src="{% static "img/img1.png" %}" class="spacing-b" alt="">
                                 <p class="last">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                                </div>
+                            </div>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="interdumMorbi">
                         <div class="row-fluid">
-                                <div class="block">
+                            <div class="block">
                                 <img src="{% static "img/img1.png" %}" class="spacing-b" alt="">
                                 <p class="last">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis Gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis lorem ipsum dolor.</p>
-                                </div>
+                            </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="mais">
+                        <h1><a href="#" class="btn">Ver Todas as Atividades </a></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="menutwo">
+                    <div class="featuredtwo">
+                      <nav class="navbar navbar-default" role="navigation">
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="#">Livro de Visitas</a></li>
+                                        <li><a href="#">FAQ's</a></li>
+                                        <li><a href="#">Mapa do Site</a></li>
+                                    </ul>
+                      </nav>
                     </div>
                 </div>
             </div>
@@ -260,6 +268,7 @@
                     </form>
                 </div>
             </div>
+
 
             <div class="container">
                 <div class="site-info">
@@ -298,6 +307,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="container">
                 <div class="copy-rights">
                     Copyright(c) Portal da Junta @ 2017. <strong> Designed by: </strong> Ricardo Auxiliar
