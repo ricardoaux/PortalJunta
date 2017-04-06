@@ -7,7 +7,7 @@
         {% load static %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Junta de Freguesia de Algures</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
        
@@ -17,10 +17,14 @@
         <link rel="stylesheet" href="{% static "css/font-awesome.css" %}">
         <link rel="stylesheet" href="{% static "css/component.css" %}">
         <link rel="stylesheet" href="{% static "css/font-awesome-ie7.css" %}">
+        <link rel="stylesheet" href="{% static "css/login.css" %}">
 
         <script src="{% static "js/modernizr-2.6.2-respond-1.1.0.min.js" %}"></script>
-    </head>
-    <body>
+
+
+        </head>
+        <body>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -29,8 +33,15 @@
             <div class="container">
                 <div class="site-header">
                         <div class="loginbtn">
-                            <img src="{% static "img/Signin.png" %}" alt="" class="bw">
-                            <h1> Junta de Freguesia de XPTO </h1>
+                            {% if user.is_authenticated %}
+                                Bem Vindo {{ user.username }}
+                                (<a href="/logout">logout</a>)
+                                {% else %}
+                                <a href="/login/">login</a> |
+                                <a href="/register/">register</a>
+                            {% endif %}
+                            <!-- <a data-toggle="modal" data-target="#login-modal"> <img src="{% static "img/Signin.png" %}" alt="" class="bw"> </a> -->
+                            <h1> Junta de Freguesia de Algures </h1>
                         </div>
                     <div class="menu">
                             <nav class="navbar navbar-default" role="navigation">
@@ -40,41 +51,53 @@
                                         <li class="dropdown">
                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Freguesia <span class="caret"></span></a>
                                           <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
+                                              <li><a href="#">Heráldica</a></li>
+                                              <li><a href="#">História</a></li>
+                                              <li><a href="#">Património</a></li>
+                                              <li><a href="#">Mapa</a></li>
+                                              <li><a href="#">Instituições</a></li>
+                                               <li><a href="#">Equipamentos</a></li>
                                           </ul>
                                         </li>
                                         <li class="dropdown">
                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Orgãos Autárquicos <span class="caret"></span></a>
                                           <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
+                                              <li><h2> Junta </h2></li>
+                                            <li><a href="#">Competências</a></li>
+                                            <li><a href="#">Presidente</a></li>
+                                            <li><a href="#">Executivo</a></li>
+                                              <hr><li><h2> Assembleia </h2></li>
+                                            <li><a href="#">Competências</a></li>
+                                            <li><a href="#">Composição</a></li>
                                           </ul>
                                         </li>
+                                        <li><a href="#noticias">Noticias</a></li>
+                                        <li><a href="#eventos">Atividades</a></li>
                                         <li class="dropdown">
                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Gestão e Orçamento <span class="caret"></span></a>
                                           <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Planos de Acção</a></li>
+                                            <li><a href="#">Relatórios de Contas</a></li>
+                                            <li><a href="#">Actas de Reunião</a></li>
                                           </ul>
                                         </li>
                                         <li class="dropdown">
                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Serviços <span class="caret"></span></a>
                                           <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
+                                              <li><a href="#">Registo de Canídeos </a></li>
+                                              <li><a href="#"> Declarações </a></li>
+                                              <li><a href="#"> Atestados </a></li>
+                                              <li><a href="#"> Licenças </a></li>
+                                              <li><a href="#"> Cemitério </a></li>
+                                              <li><a href="#"> Ruas </a></li>
                                           </ul>
                                         </li>
                                         <li class="dropdown">
                                           <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Sua Participação <span class="caret"></span></a>
                                           <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Questionários</a></li>
+                                            <li><a href="#">Votações</a></li>
+                                            <li><a href="#">Relato de Ocorrências</a></li>
                                           </ul>
                                         </li>
                                         <li><a href="#">Contactos</a></li>
@@ -107,39 +130,45 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <img src="{% static "img/banner-image.jpg" %}" alt="" class="bw">
+                                <!--
                                 <div class="carousel-caption">
                                   <h1>ipsum dolor sit amet lat</h1>
                                   <h2>Aliquam tincidunt mauris eu risus</h2>
                                 </div>
+                                -->
                             </div>
                             <div class="item">
                                 <img src="{% static "img/banner-image.jpg" %}" alt="" class="bw">
+                                <!--
                                 <div class="carousel-caption">
                                   <h1>ipsum dolor sit amet lat</h1>
                                   <h2>Aliquam tincidunt mauris eu risus</h2>
                                 </div>
+                                -->
                             </div>
                             <div class="item">
                                 <img src="{% static "img/banner-image.jpg" %}" alt="" class="bw">
+                                <!--
                                 <div class="carousel-caption">
                                   <h1>ipsum dolor sit amet lat</h1>
                                   <h2>Aliquam tincidunt mauris eu risus</h2>
                                 </div>
+                                -->
                             </div>
                         </div>
-                        <a data-slide="prev" href="#myCarousel" class="carousel-control left"><i class="fw-icon-chevron-left"></i></a>
-                        <a data-slide="next" href="#myCarousel" class="carousel-control right"><i class="fw-icon-chevron-right"></i></a>
+                        <a data-slide="prev" href="#myCarousel" class="carousel-control left"><i class="icon-arrow-left"></i></a>
+                        <a data-slide="next" href="#myCarousel" class="carousel-control right"><i class="icon-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" id="noticias">
                 <div class="featured-content">
                     <div class="row-fluid">
                         <div class="span5 offset1">
                             <div class="block">
                                 <h1>Noticia 1</h1>
                                 <h2>euismod in, pharetra ultriciesCrasconsequat vavimus supsompurkoi varsit</h2>
-                                <a href="#" class="btn">more info</a>
+                                <a href="#" class="btn"> Ler Mais</a>
                             </div>
                         </div>
                         <div class="span5">
@@ -159,39 +188,39 @@
                         <div class="span4">
                             <div class="media">
                               <a class="pull-left" href="#">
-                                <i class="fw-icon-user icon"></i>
+                                <i class="icon-news icon"></i>
                               </a>
                               <div class="media-body">
                                 <h1 class="media-heading">Noticia</h1>
                                 <div class="ruler-bottom"></div>
                                 <p class="spacing-t">Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, euin vulputate magna eros lipsum</p>
-                                <a href="#" class="btn">more</a>
+                                <a href="#" class="btn">Ler Mais</a>
                               </div>
                             </div>
                         </div>
                         <div class="span4">
                             <div class="media">
                               <a class="pull-left" href="#">
-                                <i class="fw-icon-time icon"></i>
+                                <i class="icon-news icon"></i>
                               </a>
                               <div class="media-body">
                                 <h1 class="media-heading">Noticia 2</h1>
                                 <div class="ruler-bottom"></div>
                                 <p class="spacing-t">Craesent dapibus, neque id cursus faucibus, tortor neque egestas augue, euin vulputate magna eros lipsum</p>
-                                <a href="#" class="btn">more</a>
+                                <a href="#" class="btn">Ler Mais</a>
                               </div>
                             </div>
                         </div>
                         <div class="span4">
                             <div class="media">
                               <a class="pull-left" href="#">
-                                <i class="fw-icon-tag icon"></i>
+                                <i class="icon-news icon"></i>
                               </a>
                               <div class="media-body">
                                 <h1 class="media-heading">Noticia 3</h1>
                                 <div class="ruler-bottom"></div>
                                 <p class="spacing-t">Jraesent dapibus, neque id cursus faucibus, tortor neque egestas augue, euin vulputate magna eros lipsum</p>
-                                <a href="#" class="btn">more</a>
+                                <a href="#" class="btn">Ler Mais</a>
                               </div>
                             </div>
                         </div>
@@ -204,12 +233,12 @@
 
 
             </div>
-            <div class="container">
+            <div class="container" id="eventos">
                 <div class="tabs">
                     <ul id="myTab" class="nav nav-tabs">
-                      <li class="active"><a href="#Sedegestasteet" data-toggle="tab"><i class="fw-icon-flag"></i> Evento 1 </a></li>
-                      <li class=""><a href="#morbiinterdum" data-toggle="tab"><i class="fw-icon-tint"></i> Evento 2 </a></li>
-                      <li class=""><a href="#interdumMorbi" data-toggle="tab"><i class="fw-icon-magnet"></i> Evento 3 </a></li>
+                      <li class="active"><a href="#Sedegestasteet" data-toggle="tab"><i class="icon-calendar"></i> Evento 1 </a></li>
+                      <li class=""><a href="#morbiinterdum" data-toggle="tab"><i class="icon-calendar"></i> Evento 2 </a></li>
+                      <li class=""><a href="#interdumMorbi" data-toggle="tab"><i class="icon-calendar"></i> Evento 3 </a></li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
                       <div class="tab-pane fade active in" id="Sedegestasteet">
@@ -315,14 +344,32 @@
                     Copyright(c) Portal da Junta @ 2017. <strong> Designed by: </strong> Ricardo Auxiliar
                 </div>
             </div>
-            
-       <script src="{% static "js/jquery-1.9.1.js" %}"></script>
-<script src="{% static "js/bootstrap.js" %}"></script>
-<script>
-$('#myCarousel').carousel({
-    interval: 1800
-});
-</script>
+
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;>
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+          </div>
+        </div>
+
+
+        <script src="{% static "js/jquery-1.9.1.js" %}"></script>
+        <script src="{% static "js/bootstrap.js" %}"></script>
+        <script>
+            $('#myCarousel').carousel({
+            interval: 5000
+        });
+        </script>
 
     </body>
 </html>

@@ -2285,14 +2285,14 @@ table th[class*="span"],
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   margin-top: 1px;
   *margin-right: .3em;
-  line-height: 14px;
+  line-height: 18px;
   vertical-align: text-top;
   background-image: url("../img/glyphicons-halflings.png");
-  background-position: 14px 14px;
+  background-position: 18px 18px;
   background-repeat: no-repeat;
 }
 
@@ -2880,6 +2880,16 @@ table th[class*="span"],
 .icon-fullscreen {
   background-position: -456px -144px;
 }
+
+.icon-news::after{
+  background-image: url("../img/news.png");
+  background-size: 18px 18px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  content:"";
+}
+
 
 .dropup,
 .dropdown {
